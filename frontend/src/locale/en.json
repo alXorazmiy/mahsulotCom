@@ -44,6 +44,8 @@
     "username": "username",
     "role": "role",
     "createUser" : "User create",
-    "password": "Password"
+    "password": "Password",
+    "product_admin": "Admin",
+    "super_admin": "Super Admin"
 
 }

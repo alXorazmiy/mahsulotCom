@@ -1,5 +1,9 @@
 <template>
-    <div class="menu">
+    <div class ='menu'>
+        <div class = 'sidebar-mobile-open'>
+            <i class="fa-solid fa-bars" @click="mobile_sidebar_open"></i>
+        </div>
+        <div class="menu-buttons">
        
             <select v-model = "$i18n.locale" @change="change_language($i18n.locale)">
                 <option value="UZ">UZ</option>
@@ -12,14 +16,17 @@
             </select>
             
         
+        </div>
     </div>
 </template>
 
 <script setup>
     import { onMounted, ref } from "vue";
+import { useControllerStore } from "../stores/controller";
 
 
     const theme = ref()
+    const controllerStore = useControllerStore()
 
     function change_language(lang){
         console.log(lang)
@@ -35,6 +42,10 @@
             document.body.classList.add("dark-mode-variables")
             localStorage.setItem("themeMode", 'dark')
         }   
+    }
+
+    function mobile_sidebar_open(){
+        controllerStore.mobile_sidebar = true
     }
     onMounted(()=>{
         if(localStorage.getItem("themeMode") == 'light'){

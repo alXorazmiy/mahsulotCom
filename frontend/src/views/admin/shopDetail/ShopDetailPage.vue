@@ -275,12 +275,12 @@ import { formDark } from "naive-ui";
 
     const headers = [
         { text: 'ID', value: "id", width : 50 },
-        { text: "Image", value: "image", width: 150 },
+        { text: "Image", value: "image", width: 60 },
         { text: "Title", value: "title",  },
         { text: "Category", value: "category", width: 150 },
-        { text: "Price", value: "price", width: 150, sortable: true },
-        { text: "Amount", value: "amount", width: 150,sortable: true },
-        { text: "Active", value: "active", width: 150 },
+        { text: "Price", value: "price", width: 100, sortable: true },
+        { text: "Amount", value: "amount", width: 100,sortable: true },
+        { text: "Active", value: "active", width: 100 },
 
         { text: "...", value: "tools", width : 70 }
     ]

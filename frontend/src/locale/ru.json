@@ -46,5 +46,7 @@
     "username": "логин",
     "role": "роль",
     "createUser" : "Создать пользователя",
-    "password": "Пароль"
+    "password": "Пароль",
+    "product_admin": "Admin",
+    "super_admin": "Super Admin"
 }

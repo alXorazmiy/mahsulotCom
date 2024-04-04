@@ -36,6 +36,10 @@
             <template #header-tools="{}">
                         <p><i class="fa-solid fa-ellipsis-vertical"></i></p>
             </template>
+            <template #item-role="{role}">
+                       <p class = "table-price" v-if = "role == 'product_admin'"><span class = 'role_active'>{{ $t('product_admin') }}</span></p>
+                       <p class = "table-price" v-if = "role == 'super_admin'"><span class = 'role_unactive'>{{ $t('super_admin') }}</span></p>
+            </template>
             <template #item-is_active="{is_active}">
                        <p class = "table-price" v-if = "is_active == true"><span class = 'active'>{{ $t('active_true') }}</span></p>
                        <p class = "table-price" v-if = "is_active == false"><span class = 'unactive'>{{ $t('active_false') }}</span></p>
@@ -147,8 +151,8 @@
 
     const headers = [
         { text: 'ID', value: "id", width : 50 },
-        { text: "Image", value: "username", width: 150 },
-        { text: "Title", value: "role",  },
+        { text: "Image", value: "username"},
+        { text: "Title", value: "role", width: 150 },
         { text: "price", value: "is_active", width: 150 },
         { text: "...", value: "tools", width : 70 }
     ]

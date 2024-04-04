@@ -44,5 +44,7 @@
     "username": "Login",
     "role": "Lavozim",
     "createUser" : "User yaratish",
-    "password": "Parol"
+    "password": "Parol",
+    "product_admin": "Admin",
+    "super_admin": "Super Admin"
 }

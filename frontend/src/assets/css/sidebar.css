@@ -175,3 +175,26 @@
     bottom: 80px;
     color: var(--color-dark);
 }
+
+@media only screen and (max-width: 600px){
+    .sidebar_active {
+        width: 200px !important;
+    }
+
+    .sidebar_active .nav-links .nav-link .nav-link_name{
+        display: block;
+     }
+    
+     .sidebar_active .logo .logo-title {
+        opacity: 1;
+        width: 90%;
+        transition: all 0s ease-out;
+    }
+    .sidebar_active .nav-links .nav-link:hover .nav-link_span {
+        display: none;
+        transform: translateY(0);
+    }
+    
+    
+    
+}

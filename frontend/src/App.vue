@@ -3,13 +3,13 @@
         <div class = "app-loader" v-show = 'loader'>
             <Loader />
         </div>
-        <div class = 'sidebar-container' v-if = "controllerStore.is_admin">
+        <div class = 'sidebar-container' :class = "controllerStore.mobile_sidebar ? 'sidebar_mobile_open': ''"   v-if = "controllerStore.is_admin">
             <Sidebar />
         </div>
         <div class="menu-container" v-if = "controllerStore.is_admin">
             <Menu />
         </div>
-        <div class = 'page-container' :class = "controllerStore.is_admin == false ? 'full-screen' : controllerStore.sidebar_open == true ? 'page-active' : '' " >
+        <div class = 'page-container' :class = "controllerStore.is_admin == false ? 'full-screen' : controllerStore.sidebar_open == true ? 'page-active' : '' "  @click="close_mobile_sidebar">
             <div class="page-loader" v-show = "controllerStore.page_loader">
                 <Loader />
             </div>
@@ -36,6 +36,10 @@ import { useUserStore } from './stores/users'
     const controllerStore = useControllerStore()
     const userStore = useUserStore()
     const loader = ref(true)
+
+    function close_mobile_sidebar(){
+        controllerStore.mobile_sidebar = false
+    }
 
     onMounted(()=>{
 

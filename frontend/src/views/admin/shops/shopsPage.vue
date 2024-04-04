@@ -54,7 +54,7 @@
     const searchValue = ref()
     const headers = [
         { text: 'ID', value: "id", width : 50 },
-        { text: "Image", value: "image", width: 150 },
+        { text: "Image", value: "image", width: 60 },
         { text: "Title", value: "title",  },
         { text: "...", value: "tools", width : 70 }
     ]

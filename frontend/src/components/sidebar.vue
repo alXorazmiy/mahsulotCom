@@ -81,6 +81,7 @@ import { useRouter } from "vue-router";
 
 
     function sidebar_close(){
+        controllerStore.mobile_sidebar = false
         controllerStore.sidebar_open = true
         sidebar_active.value = true
     }
@@ -91,6 +92,7 @@ import { useRouter } from "vue-router";
     }
 
     function sidebarLink(id){
+        controllerStore.mobile_sidebar = false
         sidebar_link.value = id
     }
 
